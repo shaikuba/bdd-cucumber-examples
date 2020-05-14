@@ -1,0 +1,10 @@
+.classpath
+.project
+/.settings/**
+/.idea
+/**/*.iml
+# build outputs
+/**/target
+/target
+/**/.settings
+/.metadata/
