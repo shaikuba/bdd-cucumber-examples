@@ -29,10 +29,11 @@ public class CartServiceImpl implements CartService {
         }
         if (goodsMap.get(goods) != null) {
             goodsMap.put(goods, goodsMap.get(goods) + amount);
-            Inventory.subtract(goods, amount);
         } else {
             goodsMap.put(goods, amount);
         }
+
+        Inventory.subtract(goods, amount);
     }
 
     @Override

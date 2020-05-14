@@ -1,4 +1,4 @@
-package it.learn.cucumber.examples.test.defs;
+package it.learn.cucumber.examples.test.defs.parameterized;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,40 +14,35 @@ import it.learn.cucumber.examples.shopping.Inventory;
 import it.learn.cucumber.examples.shopping.Person;
 import org.junit.Assert;
 
-public class AddCellphoneToCartStepDefinitions {
+public class AddCellphoneToCartParameterizedStepDefinitions {
 
     private Person person;
     private PersonService personService = new PersonServiceImpl();
     private CartService cartService;
 
-    @Given("I have login in the shopping website")
+    @Given("I have login in the cellphone shopping website")
     public void login() {
         person = new Person("ray");
         personService.login(person);
         cartService = new CartServiceImpl(Cart.of(person));
     }
 
-    @When("I add one cellphone into the cart")
-    public void addGoodsToCart() {
-        cartService.addGoods(new Goods("HuaWei"), 2);
+    @When("I add {int} cellphone into the cart")
+    public void addGoodsToCart(int amount) {
+        cartService.addGoods(new Goods("HuaWei"), amount);
     }
 
-    @And("I subtract the amount of the cellphone in the inventory")
-    public void subtractInventory() {
-        //Inventory.subtract(new Goods("HuaWei"), 2);
-    }
-
-    @Then("I can see one cellphone in my cart")
-    public void iCanSee() {
+    @Then("I can see {int} cellphone in my cart")
+    public void iCanSee(int amount) {
         Assert.assertEquals("I can not see my cellphone in my cart"
-                , 2
+                , amount
                 , cartService.getGoodsAmount(new Goods("HuaWei")));
     }
 
-    @And("The amount of the cellphone in the inventory should be 98")
-    public void theInventory() {
+    @And("The amount of the cellphone in the inventory should be {int}")
+    public void theInventory(int remainder) {
         Assert.assertEquals("The amount of the cellphone in the inventory is incorrect."
-                , Integer.valueOf(98)
+                , Integer.valueOf(remainder)
                 , Inventory.stockOf(new Goods("HuaWei")));
     }
 
