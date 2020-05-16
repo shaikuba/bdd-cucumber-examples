@@ -1,4 +1,4 @@
-package it.learn.cucumber.examples.test.defs.parameterized;
+package it.learn.cucumber.examples.test.defs.cart.parameterized;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

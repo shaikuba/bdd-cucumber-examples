@@ -1,4 +1,4 @@
-package it.learn.cucumber.examples.test.defs;
+package it.learn.cucumber.examples.test.defs.cart.plain;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
