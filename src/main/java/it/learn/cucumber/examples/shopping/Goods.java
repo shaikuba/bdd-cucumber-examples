@@ -13,6 +13,10 @@ public class Goods extends BaseModel {
 
     private Float price;
 
+    private int amount;
+
+    public Goods() {}
+
     public Goods(String name) {
         this.name = name;
     }

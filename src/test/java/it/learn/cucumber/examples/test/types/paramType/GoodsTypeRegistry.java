@@ -1,8 +1,7 @@
-package it.learn.cucumber.examples.test.types;
+package it.learn.cucumber.examples.test.types.paramType;
 
 import io.cucumber.core.api.TypeRegistry;
 import io.cucumber.core.api.TypeRegistryConfigurer;
-import io.cucumber.cucumberexpressions.CaptureGroupTransformer;
 import io.cucumber.cucumberexpressions.ParameterType;
 import it.learn.cucumber.examples.shopping.Goods;
 
@@ -23,11 +22,4 @@ public class GoodsTypeRegistry implements TypeRegistryConfigurer {
         return new Goods(parameterName);
     }
 
-    class GoodsTransfer implements CaptureGroupTransformer<Goods> {
-
-        @Override
-        public Goods transform(String[] strings) throws Throwable {
-            return new Goods(strings[0]);
-        }
-    }
 }
