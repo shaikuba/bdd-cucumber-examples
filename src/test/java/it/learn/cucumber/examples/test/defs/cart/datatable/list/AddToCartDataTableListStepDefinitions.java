@@ -1,5 +1,6 @@
 package it.learn.cucumber.examples.test.defs.cart.datatable.list;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,6 +25,7 @@ public class AddToCartDataTableListStepDefinitions {
     private CartService cartService;
 
     private List<Goods> goodsList = new ArrayList<>();
+
 
     @Given("I have login in the shopping website")
     public void login() {

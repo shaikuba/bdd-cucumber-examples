@@ -1,6 +1,8 @@
+@datatable-list
 Feature: Add Another Cellphone to cart
   Add Another Cellphone to cart
 
+  @demo
   Scenario: Add cellphone to cart with sufficient stock
 
     Given I have login in the shopping website
@@ -11,5 +13,3 @@ Feature: Add Another Cellphone to cart
       | XiaoMi | 800   | 5      |
     Then I can see some cellphone in my cart
     And The amount of the cellphone in the inventory should be incorrect
-
-

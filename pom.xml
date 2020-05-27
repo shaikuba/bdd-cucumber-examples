@@ -10,17 +10,30 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java8</artifactId>
-            <version>4.8.0</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>4.8.0</version>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!--https://gitlab.com/monochromata-de/cucumber-reporting-plugin-->
+        <dependency>
+            <groupId>de.monochromata.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>4.0.52</version>
             <scope>test</scope>
         </dependency>
 
@@ -57,7 +70,7 @@
                     <skipTests>false</skipTests>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
-                        <include>**/*TestRunner.java</include>
+                        <include>**/*TableList*.java</include>
                     </includes>
                 </configuration>
             </plugin>
