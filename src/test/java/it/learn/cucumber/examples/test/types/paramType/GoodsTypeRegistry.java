@@ -15,7 +15,10 @@ public class GoodsTypeRegistry implements TypeRegistryConfigurer {
 
     @Override
     public void configureTypeRegistry(TypeRegistry typeRegistry) {
-        typeRegistry.defineParameterType(new ParameterType("goodsName", "\\w+", Goods.class, this::goodsTransformer));
+        typeRegistry.defineParameterType(new ParameterType("goodsName"
+                , "\\w+"
+                , Goods.class
+                , this::goodsTransformer));
     }
 
     private Goods goodsTransformer(String parameterName) {
@@ -23,3 +26,8 @@ public class GoodsTypeRegistry implements TypeRegistryConfigurer {
     }
 
 }
+
+
+
+
+

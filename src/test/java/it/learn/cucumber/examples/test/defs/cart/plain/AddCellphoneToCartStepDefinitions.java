@@ -40,15 +40,13 @@ public class AddCellphoneToCartStepDefinitions {
     @Then("I can see one cellphone in my cart")
     public void iCanSee() {
         Assert.assertEquals("I can not see my cellphone in my cart"
-                , 2
-                , cartService.getGoodsAmount(new Goods("HuaWei")));
+                , 2 , cartService.getGoodsAmount(new Goods("HuaWei")));
     }
 
     @And("The amount of the cellphone in the inventory should be 98")
     public void theInventory() {
         Assert.assertEquals("The amount of the cellphone in the inventory is incorrect."
-                , Integer.valueOf(98)
-                , Inventory.stockOf(new Goods("HuaWei")));
+                , Integer.valueOf(98) , Inventory.stockOf(new Goods("HuaWei")));
     }
 
 }

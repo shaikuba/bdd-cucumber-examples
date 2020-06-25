@@ -1,5 +1,6 @@
-Feature: Add Another Cellphone to cart
-  Add Another Cellphone to cart
+@shopping-example
+Feature: Add one cellphone to cart
+  Add one cellphone to cart
 
   Scenario: Add cellphone to cart with sufficient stock
 
@@ -7,6 +8,6 @@ Feature: Add Another Cellphone to cart
     When I add one cellphone into the cart
     And I subtract the amount of the cellphone in the inventory
     Then I can see one cellphone in my cart
-    And The amount of the cellphone in the inventory should be 98
+    And The amount of the cellphone in the inventory should be 99
 
 

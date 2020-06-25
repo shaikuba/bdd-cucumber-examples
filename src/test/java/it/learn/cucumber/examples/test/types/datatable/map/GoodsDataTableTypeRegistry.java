@@ -32,14 +32,6 @@ public class GoodsDataTableTypeRegistry implements TypeRegistryConfigurer {
             return goods;
         }));
 
-
-//        typeRegistry.defineDataTableType(new DataTableType(Goods.class, (DataTable dataTable) -> {
-//            Goods goods = new Goods();
-//            goods.setName(dataTable.cell(0, 1));
-//            goods.setPrice(Float.parseFloat(dataTable.cell(1, 1)));
-//            goods.setAmount(Integer.parseInt(dataTable.cell(2, 1)));
-//            return goods;
-//        }));
     }
 
 }
