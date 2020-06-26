@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(monochrome = true
         , features = {"classpath:features/cart/add_to_cart_expression.feature"}
-        , glue = "it.learn.cucumber.examples.test.defs.cart.expression"
+        , glue = {"it.learn.cucumber.examples.test.defs.cart.expression"}
         , plugin = "html:target/cucumber"
 )
 public class AddToCartExpressionTestRunner {

@@ -32,18 +32,13 @@ public class AddCellphoneToCartStepDefinitions {
         cartService.addGoods(new Goods("HuaWei"), 2);
     }
 
-    @And("I subtract the amount of the cellphone in the inventory")
-    public void subtractInventory() {
-        //Inventory.subtract(new Goods("HuaWei"), 2);
-    }
-
     @Then("I can see one cellphone in my cart")
     public void iCanSee() {
         Assert.assertEquals("I can not see my cellphone in my cart"
                 , 2 , cartService.getGoodsAmount(new Goods("HuaWei")));
     }
 
-    @And("The amount of the cellphone in the inventory should be 98")
+    @And("The amount of the cellphone in the inventory should be 99")
     public void theInventory() {
         Assert.assertEquals("The amount of the cellphone in the inventory is incorrect."
                 , Integer.valueOf(98) , Inventory.stockOf(new Goods("HuaWei")));

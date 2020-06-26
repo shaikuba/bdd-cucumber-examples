@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"classpath:features/cart/add_to_cart_datatable.feature"}
         , glue = {"it.learn.cucumber.examples.test.defs.cart.datatable.map",
-        "it.learn.cucumber.examples.test.types.datatable.map"}
+        "it.learn.cucumber.examples.test.types.goods"}
         , plugin = "html:target/cucumber"
 )
 public class AddToCartDataTableTestRunner {

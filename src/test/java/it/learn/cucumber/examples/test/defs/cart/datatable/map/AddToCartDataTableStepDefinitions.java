@@ -1,7 +1,5 @@
 package it.learn.cucumber.examples.test.defs.cart.datatable.map;
 
-import com.alibaba.fastjson.JSON;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,8 +13,6 @@ import it.learn.cucumber.examples.shopping.Goods;
 import it.learn.cucumber.examples.shopping.Inventory;
 import it.learn.cucumber.examples.shopping.Person;
 import org.junit.Assert;
-
-import java.util.Map;
 
 public class AddToCartDataTableStepDefinitions {
 

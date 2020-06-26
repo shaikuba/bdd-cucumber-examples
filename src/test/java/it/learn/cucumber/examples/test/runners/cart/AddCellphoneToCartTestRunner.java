@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(monochrome = true
         , features = {"classpath:features/cart/add_cellphone_to_cart.feature"}
-        , glue = "it.learn.cucumber.examples.test.defs.cart"
+        , glue = "it.learn.cucumber.examples.test.defs.cart.plain"
         , plugin = "html:target/cucumber"
 )
 public class AddCellphoneToCartTestRunner {

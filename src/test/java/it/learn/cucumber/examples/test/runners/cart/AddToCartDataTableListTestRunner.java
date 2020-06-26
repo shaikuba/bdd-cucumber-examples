@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"classpath:features/cart/add_to_cart_datatable-list.feature"}
         , glue = {"it.learn.cucumber.examples.test.defs.cart.datatable.list"
-        , "it.learn.cucumber.examples.test.types.datatable.list"}
+        , "it.learn.cucumber.examples.test.types.goods"}
         , plugin = "de.monochromata.cucumber.report.PrettyReports:target/cucumber"
 )
 public class AddToCartDataTableListTestRunner {

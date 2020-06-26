@@ -28,8 +28,8 @@ public class AddToCartExpressionStepDefinitions {
     }
 
     @When("I add (\\d+) (\\w+) into the cart")
-    public void addGoodsToCart(int amount, Goods goods) {
-        cartService.addGoods(goods, amount);
+    public void addGoodsToCart(int amount, String goodsName) {
+        cartService.addGoods(getGoodsByName(goodsName), amount);
     }
 
     @Then("I can see {int} {word} in my cart")
