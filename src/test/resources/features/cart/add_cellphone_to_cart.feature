@@ -10,3 +10,5 @@ Feature: Add one cellphone to cart
     And The amount of the cellphone in the inventory should be 99
 
 
+
+

@@ -8,6 +8,7 @@ import it.learn.cucumber.examples.shopping.Inventory;
 import it.learn.cucumber.examples.shopping.Order;
 import lombok.Data;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Data
@@ -23,6 +24,9 @@ public class CartServiceImpl implements CartService {
     public void addGoods(Goods goods, int amount) {
 
         Map<Goods, Integer> goodsMap = cart.getGoodsMap();
+//        Map<Goods, Integer> goodsMap = new HashMap<>();
+//        goodsMap.put(new Goods("Apple"), 10);
+
 
         if (Inventory.stockOf(goods) <= 0) {
             throw new RuntimeException("No sufficient goods in inventory.");

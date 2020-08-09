@@ -41,7 +41,7 @@ public class AddCellphoneToCartStepDefinitions {
     @And("The amount of the cellphone in the inventory should be 99")
     public void theInventory() {
         Assert.assertEquals("The amount of the cellphone in the inventory is incorrect."
-                , Integer.valueOf(98) , Inventory.stockOf(new Goods("HuaWei")));
+                , Integer.valueOf(99) , Inventory.stockOf(new Goods("HuaWei")));
     }
 
 }
