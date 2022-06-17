@@ -10,7 +10,7 @@
 
     <properties>
         <cucumber.version>4.8.0</cucumber.version>
-        <fastjson.version>1.2.68</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
